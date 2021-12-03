@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap");
+@font-face {
+  font-family: "Vanilla";
+  src: url(./fonts/Vanilla.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  cursor: url(/svg/arrow.svg) 0 0, auto;
+}
+
+body {
+  overflow: hidden;
+}
+
+button {
+  background-color: none;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+main .container .main_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main .container nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container nav .logo img:hover {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+}
+
+main .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container nav ul li {
+  padding: 0 20px;
+}
+
+main .container nav ul li a {
+  -webkit-filter: drop-shadow(2px 2px 0 #000);
+          filter: drop-shadow(2px 2px 0 #000);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #000;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .container nav ul li a:hover {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-filter: drop-shadow(0 0 0 #000000);
+          filter: drop-shadow(0 0 0 #000000);
+  -webkit-transform: translate3d(2px, 2px, 2px);
+          transform: translate3d(2px, 2px, 2px);
+}
+
+main .container nav ul li a img {
+  padding: 10px;
+}
+
+main .container nav ul li a img:hover {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+}
+
+main .container nav ul li .twitter {
+  background: #2aa3ef;
+}
+
+main .container nav ul li .facebook {
+  background: #227aef;
+}
+
+main .container nav ul li .linkedin {
+  background: #0a66c2;
+}
+
+main .container nav button {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 12px;
+  line-height: 2em;
+  -webkit-box-shadow: 0 0 0 2px #000;
+          box-shadow: 0 0 0 2px #000;
+  position: relative;
+  background: #fff;
+  -webkit-filter: drop-shadow(2px 2px 2px #000);
+          filter: drop-shadow(2px 2px 2px #000);
+  -webkit-transform: translate3d(0px, 0px, 0);
+          transform: translate3d(0px, 0px, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .container nav button::before, main .container nav button::after {
+  content: "";
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+main .container nav button::before {
+  -webkit-transform: translate3d(2px, 14px, 0);
+          transform: translate3d(2px, 14px, 0);
+  border-right: 30px solid #000;
+}
+
+main .container nav button::after {
+  -webkit-transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
+  border-right: 30px solid #fff;
+}
+
+main .container nav button:hover {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-filter: drop-shadow(0 0 0 #000000);
+          filter: drop-shadow(0 0 0 #000000);
+  -webkit-transform: translate3d(4px, 4px, 0);
+          transform: translate3d(4px, 4px, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main .container article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .container article h2 {
+  font-family: "Vanilla", sans-serif;
+  -webkit-text-stroke: 1px #000;
+  font-size: 45px;
+  line-height: 90px;
+  max-width: 1000px;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+main .container article .page_content {
+  margin-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container article .page_content a {
+  background-color: transparent;
+}
+
+main .container article .page_content a button {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 5px 5px #000;
+          box-shadow: 5px 5px #000;
+  background-color: #a9eb67;
+  overflow: hidden;
+  padding: 12px 31px;
+  font-family: "Lato", sans-serif;
+  border-radius: 9px;
+  font-size: 18px;
+  border: 3px solid #000;
+  color: #000;
+  line-height: 25px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+main .container article .page_content a button span {
+  position: relative;
+  z-index: 0C;
+}
+
+main .container article .page_content a button span::before, main .container article .page_content a button span::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 80px;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  z-index: -1;
+  background-color: #cafe96;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main .container article .page_content a button span::before {
+  left: 36px;
+  height: 8px;
+}
+
+main .container article .page_content a button span::after {
+  left: 0;
+  height: 26px;
+}
+
+main .container article .page_content a:hover button {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0 0 0 #000;
+          box-shadow: 0 0 0 #000;
+  -webkit-transform: translate3d(5px, 5px, 0);
+          transform: translate3d(5px, 5px, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main .container article .page_content a:hover button span {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+}
+
+main .container article .page_content button {
+  margin-top: 38px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  line-height: 25px;
+  font-size: 18px;
+  border-bottom: 3px solid #000;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  padding-bottom: 5px;
+}
+
+main .container article .page_content button:hover {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+main .container footer {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-bottom: 30px;
+}
+
+main .container footer span {
+  display: inline-block;
+  font-family: LatoRegular, sans-serif;
+  font-size: 16px;
+  line-height: 1em;
+  color: #000;
+}
+
+main .container footer a img {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .container footer a img:hover {
+  cursor: url(/svg/hand.svg) 0 0, pointer !important;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .container .page_person {
+  position: absolute;
+  bottom: 0;
+  right: 5vw;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+}
+/*# sourceMappingURL=style.css.map */
