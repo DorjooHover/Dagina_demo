@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap");
+@font-face {
+    font-family: "Vanilla";
+    src: url(./fonts/Vanilla.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4eddc;
+    cursor: url(/svg/arrow.svg) 0 0, auto;
+}
+
+.cursor {
+    position: absolute;
+    min-height: 25px;
+    display: none;
+    z-index: 10;
+    img {
+        margin-left: 5px;
+    }
+    &_bg {
+        width: 25px;
+        height: 25px;
+        background: rgba($color: #fff, $alpha: .3);
+        display: inline-block;
+        border-radius: 50%;
+        animation: cursor_anim 1s infinite;
+        &::after {
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            border: 8px solid #fff;
+            background: #fff;
+            opacity: 0.3;
+            top: -8px;
+            left: -8px;
+            animation: cursor_anim2 1s infinite;
+            border-radius: 50%;
+        }
+    }
+    @keyframes cursor_anim {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0.7);
+        }
+    }
+    @keyframes cursor_anim2 {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(0.4);
+        }
+    }
+    &_text {
+        margin-top: -70px;
+        margin-left: 30px;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #262626;
+            width: 0%;
+            overflow: hidden;
+            transition: 3s;
+        }
+    }
+}
+
+main {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    .container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: mouth_hold 5s;
+            // font-family: 'Vanilla', sans-serif;
+            width: 50%;
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 5px 5px 5px #000;
+            line-height: 3em;
+            &:hover {
+                cursor: url(/svg/hand.svg) 0 0, pointer !important;
+            }
+        }
+        .balloon {
+            animation: blow 5s;
+            position: absolute;
+            top: 20%;
+            transform: scale(1.7);
+            opacity: 1;
+            &_bg {
+                fill: red;
+            }
+            // &:hover {
+            //     // cursor: url(/svg/hand.svg) 0 0, pointer !important;
+            // }
+        }
+        #person {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            .shit {
+                display: none;
+            }
+            .mouth_1 {
+                opacity: 1;
+                animation: mouth_hold 2s;
+            }
+            .mouth_2_move {
+                transform: translate(0px, 0px);
+                animation: mouth_move 2s;
+                opacity: 0;
+            }
+            @keyframes mouth_hold {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes mouth_move {
+                0% {
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                }
+                5% {
+                    opacity: 1;
+                    transform: translate(-3px, 3px);
+                }
+                10% {
+                    opacity: 1;
+                    transform: translate(-6px, 6px);
+                }
+                15% {
+                    transform: translate(-9px, 9px);
+                    opacity: 1;
+                }
+                20% {
+                    opacity: 1;
+                    transform: translate(-12px, 12px);
+                }
+                25% {
+                    opacity: 1;
+                    transform: translate(-9px, 9px);
+                }
+                30% {
+                    opacity: 1;
+                    transform: translate(-6px, 6px);
+                }
+                35% {
+                    opacity: 1;
+                    transform: translate(-3px, 3px);
+                }
+                40% {
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                }
+                45% {
+                    transform: translate(-3px, 3px);
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                    transform: translate(-6px, 6px);
+                }
+                55% {
+                    opacity: 1;
+                    transform: translate(-9px, 9px);
+                }
+                60% {
+                    transform: translate(-12px, 12px);
+                    opacity: 1;
+                }
+                65% {
+                    opacity: 1;
+                    transform: translate(-9px, 9px);
+                }
+                70% {
+                    opacity: 1;
+                    transform: translate(-6px, 6px);
+                }
+                75% {
+                    opacity: 1;
+                    transform: translate(-3px, 3px);
+                }
+                80% {
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                }
+                85% {
+                    opacity: 1;
+                    transform: translate(-3px, 3px);
+                }
+                90% {
+                    opacity: 1;
+                    transform: translate(-6px, 6px);
+                }
+                95% {
+                    opacity: 1;
+                    transform: translate(-9px, 9px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translate(-12px, 12px);
+                }
+            }
+        }
+    }
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+@keyframes blow {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    55% {
+        transform: scale(0.5);
+        opacity: 0.3;
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.7);
+        opacity: 1;
+    }
+}
