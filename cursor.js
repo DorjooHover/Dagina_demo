@@ -10,9 +10,9 @@ balloon.addEventListener('mousedown', e => {
 balloon.addEventListener('mouseup', e => {
     console.log('asdf')
     mouseUp()
-        // if ((end - start) >= 2000) {
-        //     window.location.href = 'index.html'
-        // }
+    if ((end - start) >= 2000) {
+        window.location.href = 'index.html'
+    }
 })
 
 function mouseDown() {
